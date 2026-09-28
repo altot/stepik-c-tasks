@@ -53,30 +53,17 @@ int main(void)
     scanf("%c%c%c", &r, &w, &x);
     switch (r)
     {
-    case (r):
+    case ('r'):
         sum = sum + 4;
 
-        switch ('w')
+        switch (w)
         {
-        case (w):
+        case ('w'):
             sum = sum + 2;
 
-            switch ('x')
-            {
-            case (x):
-                sum = sum + 1;
-                break;
-            case (-):
-                break;
-
-            default:
-                printf("Invalid format\n");
-                break;
-            }
-        case (-):
             switch (x)
             {
-            case (x):
+            case ('x'):
                 sum = sum + 1;
                 break;
             case ('-'):
@@ -84,22 +71,37 @@ int main(void)
 
             default:
                 printf("Invalid format\n");
+                return 0;
+            }
+            break;
+        case ('-'):
+            switch (x)
+            {
+            case ('x'):
+                sum = sum + 1;
                 break;
+            case ('-'):
+                break;
+
+            default:
+                printf("Invalid format\n");
+                return 0;
             }
             break;
 
         default:
             printf("Invalid format\n");
-            break;
+            return 0;
         }
+        break;
 
     case ('-'):
-        switch ('w')
+        switch (w)
         {
 
         case ('w'):
             sum = sum + 2;
-            switch ('x')
+            switch (x)
             {
 
             case ('x'):
@@ -109,10 +111,11 @@ int main(void)
                 break;
             default:
                 printf("Invalid format\n");
-                break;
+                return 0;
             }
+            break;
         case ('-'):
-            switch ('x')
+            switch (x)
             {
 
             case ('x'):
@@ -122,18 +125,21 @@ int main(void)
                 break;
             default:
                 printf("Invalid format\n");
-                break;
+
+                return 0;
             }
             break;
         default:
             printf("Invalid format\n");
-            break;
-        }
 
+            return 0;
+        }
+        break;
     default:
         printf("Invalid format\n");
-        break;
+
+        return 0;
     }
-    printf("%d", sum);
+    printf("%d\n", sum);
     return 0;
 }
