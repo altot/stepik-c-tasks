@@ -11,7 +11,7 @@
 Выходные данные:
 Одно целое число -- номер квадранта.
 
- 
+
 
 Наставление: постарайтесь обойтись без инструкции switch
 */
@@ -19,12 +19,17 @@
 int main(void)
 {
 
-double x, y;
-scanf("%lf%lf", &x, &y);
+    double x, y;
+    int kv1, kv2, kv3, kv4, kv;
+    scanf("%lf%lf", &x, &y);
 
+    kv1 = x > 0 && y > 0;
+    kv2 = (x < 0 && y > 0) * 2;
+    kv3 = (x < 0 && y < 0) * 3;
+    kv4 = (x > 0 && y < 0) * 4;
+    kv = kv1 + kv2 + kv3 + kv4;
 
-
-
+    printf("%d\n", kv);
 
     return 0;
 }
