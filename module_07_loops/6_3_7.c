@@ -14,6 +14,20 @@ int main(void)
 {
     int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
     scanf("%d%d%d%d", &x1, &y1, &x2, &y2);
+    int s1 = x1 * x1 + y1 * y1;
+    int s2 = x2 * x2 + y2 * y2;
+    if (s1 > s2)
+    {
+        printf("2\n");
+    }
+    if (s2 > s1)
+    {
+        printf("1\n");
+    }
+    if (s1 == s2)
+    {
+        printf("0\n");
+    }
 
     return 0;
 }
