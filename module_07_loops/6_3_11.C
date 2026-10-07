@@ -28,8 +28,18 @@ if (return_condition){
 int main(void)
 {
     double x, y;
-    scanf("%lf%lf", &x, &y);
-
+    int res;
+    res = scanf("%lf%lf", &x, &y);
+    if (res < 2)
+    {
+        printf("Incorrect input");
+        return 0;
+    }
+    if (x == 0 || y == 0)
+    {
+        printf("Incorrect input");
+        return 0;
+    }
     // Добавьте сюда early returns
 
     if (x > 0)
@@ -44,7 +54,6 @@ int main(void)
             printf("%d\n", 4);
             return 0;
         }
-      return 0;  
     }
     else
     {
@@ -58,9 +67,7 @@ int main(void)
             printf("%d\n", 3);
             return 0;
         }
-        return 0;
     }
 
-    
     return 0;
 }
