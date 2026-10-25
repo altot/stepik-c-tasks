@@ -41,7 +41,6 @@ P = 100
 int main(void){
 int p=0;
 scanf("%d", &p);
-printf("P = %d\n", p);
 printf("%3d%% [", p);
 int a = 0, b = 0, c = 0;
 a = p / 2;
