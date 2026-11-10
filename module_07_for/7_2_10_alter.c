@@ -21,9 +21,9 @@ int main(void) {
   int max = -9999;
   int number = 0;
 
-  for (int i = 1; k <= N; i++){
+  for (int i = 1; i <= N; i++){
     scanf("%d", &number);
-    if (max < namber)
+    if (max < number)
       max = number;
   }
 
